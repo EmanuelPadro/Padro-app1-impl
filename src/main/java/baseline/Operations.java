@@ -6,32 +6,34 @@ package baseline;
  */
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Operations {
+    List<Task> tasks =  new ArrayList<>();
 
-    private Operations(){}//Private constructor for utility class
+    Operations(){}
 
-    public static void createList(String listTitle){
-        //Will add a list to database
+    public void addTasks(Task newTask){
+        this.tasks.add(newTask);
     }
-    public static void editList(){
-        //Will access and edit an existing list with given value
-    }
-    public static void deleteList(){
-        //access database and remove a list from it
-    }
-    public static void addTasks(){
-        //Access given List to add the new given task
-    }
-    public static void editTaskDescription(){
+    public void editTaskDescription(){
         //Access a task within a list and changes its description to new one
     }
-    public static void editTaskDueDate(){
+    public void editTaskDueDate(){
         //Access a task within a list and changes its due date to a new one
     }
-    public static void deleteTask(){
-        //access a task from a list and remove it
+    public void deleteTask(){
+        //access a task from list and remove it
     }
-    public static void displayList(){
+    public void displayList(){
         //simply displays a list for the use to view upon asking for it
     }
+    public void displayComplete(){
+        //Will display only complete tasks
+    }
+    public void displayIncomplete(){
+        //Will display only incomplete tasks
+    }
+
 }

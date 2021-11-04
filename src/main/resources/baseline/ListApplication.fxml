@@ -26,8 +26,8 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextField promptText="Task Due Date" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-      <TextField promptText="Task Description" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <TextField fx:id="taskDueDateText" promptText="Task Due Date" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <TextField fx:id="taskDescriptionText" promptText="Task Description" GridPane.columnIndex="4" GridPane.rowIndex="2" />
       <TextField promptText="Task Num" GridPane.columnIndex="4" GridPane.rowIndex="5" />
       <TextField promptText="New Due Date" GridPane.columnIndex="5" GridPane.rowIndex="7" />
       <TextField promptText="New Description" GridPane.columnIndex="4" GridPane.rowIndex="7" />
@@ -41,6 +41,8 @@
       <Button fx:id="allTasks" mnemonicParsing="false" onAction="#displayTasks" text="All Tasks" GridPane.columnIndex="4" GridPane.rowIndex="1" />
       <Button fx:id="incompleteTasks" mnemonicParsing="false" onAction="#displayIncompleteTasks" text="Incomplete Tasks" GridPane.columnIndex="5" GridPane.rowIndex="1" />
       <Button fx:id="completeTasks" mnemonicParsing="false" onAction="#displayCompleteTasks" prefHeight="25.0" prefWidth="109.0" text="Complete Tasks" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button fx:id="clearList" mnemonicParsing="false" onAction="#saveListClicked" text="Clear List" GridPane.columnIndex="4" />
+      <Button fx:id="clearList" mnemonicParsing="false" onAction="#clearList" text="Clear List" GridPane.columnIndex="5" />
+      <Button fx:id="loadList" mnemonicParsing="false" onAction="#loadListClicked" text="Load List" GridPane.columnIndex="4" />
+      <Button fx:id="createList" mnemonicParsing="false" onAction="#newListClicked" text="New List" GridPane.columnIndex="3" />
    </children>
 </GridPane>

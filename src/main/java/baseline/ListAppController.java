@@ -12,6 +12,20 @@ import javafx.scene.control.TextField;
 
 public class ListAppController {
     @FXML
+    public TextField taskDueDateText;
+    @FXML
+    public TextField taskDescriptionText;
+
+    @FXML
+    public Button clearList;
+
+    @FXML
+    public Button loadList;
+
+    @FXML
+    public Button createList;
+
+    @FXML
     private Button addList;
 
     @FXML
@@ -53,17 +67,17 @@ public class ListAppController {
     @FXML
     void saveListClicked(ActionEvent event) {
         //when savelist is clicked it should call a class which will go trough the process
-    }
-
-    @FXML
-    void addListPressed(ActionEvent event) {
-        //when addList is clicked it should call a class which will go trough the process
 
     }
 
     @FXML
     void addTaskClicked(ActionEvent event) {
-        //when addTask is clicked it should call a class which will go trough the process
+        String dueDate = taskDueDateText.getText();
+        String desc = taskDescriptionText.getText();
+        Task newtask = new Task(desc, dueDate);
+
+        
+
     }
 
     @FXML
@@ -77,11 +91,6 @@ public class ListAppController {
     }
 
     @FXML
-    void displayLists(ActionEvent event) {
-        //when displayLists is clicked it should call a class which will go trough the process
-    }
-
-    @FXML
     void displayTasks(ActionEvent event) {
         //when displayTasks is clicked it should call a class which will go trough the process
     }
@@ -92,18 +101,8 @@ public class ListAppController {
     }
 
     @FXML
-    void editTitleClicked(ActionEvent event) {
-        //when editTitle is clicked it should call a class which will go trough the process
-    }
-
-    @FXML
     void markCompleteClicked(ActionEvent event) {
         //when markComplete is clicked it should call a class which will go trough the process
-    }
-
-    @FXML
-    void removeListClicked(ActionEvent event) {
-        //when removeList is clicked it should call a class which will go trough the process
     }
 
     @FXML
@@ -111,4 +110,19 @@ public class ListAppController {
         //when removeTask is clicked it should call a class which will go trough the process
     }
 
+    @FXML
+    public void loadListClicked(ActionEvent actionEvent) {
+        //will loadlist
+    }
+
+    @FXML
+    Operations newListClicked(ActionEvent event) {
+        Operations list = new Operations();
+        return list;
+    }
+
+    @FXML
+    void clearList(ActionEvent event) {
+        //will clear memory
+    }
 }

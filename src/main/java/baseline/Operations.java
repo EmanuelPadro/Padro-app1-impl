@@ -12,7 +12,6 @@ public class Operations {
 
     public static void createList(String listTitle){
         //Will add a list to database
-
     }
     public static void editList(){
         //Will access and edit an existing list with given value

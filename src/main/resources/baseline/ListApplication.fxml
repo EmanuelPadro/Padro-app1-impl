@@ -26,25 +26,21 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="addList" mnemonicParsing="false" onAction="#addListPressed" text="Add List" GridPane.rowIndex="2" />
-      <TextField promptText="List Name" GridPane.columnIndex="2" GridPane.columnSpan="2" />
       <TextField promptText="Task Due Date" GridPane.columnIndex="5" GridPane.rowIndex="2" />
       <TextField promptText="Task Description" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-      <TextField promptText="Task Num" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-      <TextField promptText="New Due Date" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-      <TextField promptText="New Description" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      <TextField promptText="New Title" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <Button fx:id="removeList" mnemonicParsing="false" onAction="#removeListClicked" text="Remove List" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="saveList" mnemonicParsing="false" onAction="#saveListClicked" text="Save List" GridPane.rowIndex="3" />
-      <Button fx:id="editTitle" mnemonicParsing="false" onAction="#editTitleClicked" text="Edit Ttile" GridPane.rowIndex="4" />
-      <Button fx:id="markComplete" mnemonicParsing="false" onAction="#markCompleteClicked" text="Mark Complete" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-      <TextField fx:id="fileTextbox" promptText="File Location" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField promptText="Task Num" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <TextField promptText="New Due Date" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <TextField promptText="New Description" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <TextField promptText="List Title" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Button fx:id="saveList" mnemonicParsing="false" onAction="#saveListClicked" text="Save List" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button fx:id="markComplete" mnemonicParsing="false" onAction="#markCompleteClicked" text="Mark Complete" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <TextField fx:id="fileTextbox" promptText="File Location" GridPane.columnIndex="4" GridPane.rowIndex="3" />
       <Button fx:id="addTask" mnemonicParsing="false" onAction="#addTaskClicked" text="Add Task" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-      <Button fx:id="removeTask" mnemonicParsing="false" onAction="#removeTaskClicked" text="Remove Task" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-      <Button fx:id="editTask" mnemonicParsing="false" onAction="#editTaskClicked" text="Edit Task" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button fx:id="removeTask" mnemonicParsing="false" onAction="#removeTaskClicked" text="Remove Task" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Button fx:id="editTask" mnemonicParsing="false" onAction="#editTaskClicked" text="Edit Task" GridPane.columnIndex="3" GridPane.rowIndex="7" />
       <Button fx:id="allTasks" mnemonicParsing="false" onAction="#displayTasks" text="All Tasks" GridPane.columnIndex="4" GridPane.rowIndex="1" />
       <Button fx:id="incompleteTasks" mnemonicParsing="false" onAction="#displayIncompleteTasks" text="Incomplete Tasks" GridPane.columnIndex="5" GridPane.rowIndex="1" />
       <Button fx:id="completeTasks" mnemonicParsing="false" onAction="#displayCompleteTasks" prefHeight="25.0" prefWidth="109.0" text="Complete Tasks" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button fx:id="displayAllList" mnemonicParsing="false" onAction="#displayLists" text="Display All Lists" GridPane.rowIndex="1" />
+      <Button fx:id="clearList" mnemonicParsing="false" onAction="#saveListClicked" text="Clear List" GridPane.columnIndex="4" />
    </children>
 </GridPane>

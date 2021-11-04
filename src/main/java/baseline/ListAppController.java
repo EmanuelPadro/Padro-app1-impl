@@ -11,8 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class ListAppController {
-
-    public TextField FileLocationTextbox;
     @FXML
     private Button addList;
 

@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+class Database
+class ListandTasks{
++createList
++editList
++deleteList
++addTasks
+editTaskDescription
++editTaskDuetDate
++deleteTask
++displayList
+}
+class ListApp{
+
+}
+class ListAppController{
+
+}
+
+class Tasks
+
+Tasks <|-- Database
+@enduml

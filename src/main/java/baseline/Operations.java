@@ -12,11 +12,14 @@ import java.util.List;
 public class Operations {
     List<Task> tasks =  new ArrayList<>();
 
-    Operations(){}
+    Operations(){
+
+    }
 
     public void addTasks(Task newTask){
         this.tasks.add(newTask);
     }
+
     public void editTaskDescription(){
         //Access a task within a list and changes its description to new one
     }

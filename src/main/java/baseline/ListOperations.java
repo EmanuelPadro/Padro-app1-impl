@@ -1,12 +1,12 @@
 package baseline;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListOperations {
 
-    public Operations getList(){
-        return new Operations();
+    public static void CreateList(){
     }
 
-    public void loadList(){
 
-    }
 }

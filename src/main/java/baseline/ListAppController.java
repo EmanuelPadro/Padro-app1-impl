@@ -11,6 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class ListAppController {
+    Operations operations = new Operations();
+
     @FXML
     public TextField taskDueDateText;
     @FXML
@@ -74,9 +76,8 @@ public class ListAppController {
     void addTaskClicked(ActionEvent event) {
         String dueDate = taskDueDateText.getText();
         String desc = taskDescriptionText.getText();
-        Task newtask = new Task(desc, dueDate);
-
-        
+        Task newTask = new Task(desc, dueDate);
+        operations.addTasks(newTask);
 
     }
 
@@ -111,14 +112,12 @@ public class ListAppController {
     }
 
     @FXML
-    public void loadListClicked(ActionEvent actionEvent) {
+    void loadListClicked(ActionEvent event) {
         //will loadlist
     }
 
     @FXML
-    Operations newListClicked(ActionEvent event) {
-        Operations list = new Operations();
-        return list;
+    void newListClicked(ActionEvent event) {
     }
 
     @FXML

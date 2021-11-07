@@ -130,7 +130,7 @@ public class ListAppController {
 
     @FXML
     void loadListClicked(ActionEvent event) {
-        //will Loadlist
+        //will LoadList
     }
 
     @FXML

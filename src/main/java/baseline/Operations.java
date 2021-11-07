@@ -20,6 +20,10 @@ public class Operations {
         return tasks.get(taskID).description;
     }
 
+    public String returnTaskDueDate(int taskID){
+        return tasks.get(taskID).dueDate;
+    }
+
     public void editTaskDescription(){
         //Access a task within a list and changes its description to new one
     }

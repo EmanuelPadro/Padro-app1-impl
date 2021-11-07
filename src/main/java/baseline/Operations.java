@@ -24,15 +24,13 @@ public class Operations {
         return tasks.get(taskID).dueDate;
     }
 
-    public void editTaskDescription(){
-        //Access a task within a list and changes its description to new one
-    }
-    public void editTaskDueDate(){
-        //Access a task within a list and changes its due date to a new one
+    public void editTask(int taskID, Task newTask){
+        tasks.set(taskID,newTask);
     }
     public void deleteTask(int taskID){
         tasks.remove(taskID);
     }
+
     public void displayList(){
         for (int i = 0; i < tasks.size() ; i++){
             System.out.println("Task " + i + ": ");

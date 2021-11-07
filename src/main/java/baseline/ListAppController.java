@@ -15,8 +15,16 @@ public class ListAppController {
 
     @FXML
     public TextField taskIDText;
+
+    @FXML
+    public TextField newDueDate;
+
+    @FXML
+    public TextField newDescription;
+
     @FXML
     public TextField taskDueDateText;
+
     @FXML
     public TextField taskDescriptionText;
 
@@ -70,8 +78,7 @@ public class ListAppController {
 
     @FXML
     void saveListClicked(ActionEvent event) {
-        //when savelist is clicked it should call a class which will go trough the process
-
+        //when saveList is clicked it should call a class which will go trough the process
     }
 
     @FXML
@@ -102,7 +109,11 @@ public class ListAppController {
 
     @FXML
     void editTaskClicked(ActionEvent event) {
-        //when editTask is clicked it should call a class which will go trough the process
+        int taskID = Integer.parseInt(taskIDText.getText());
+        String dueDate = newDueDate.getText();
+        String desc = newDescription.getText();
+        Task newTask = new Task(desc, dueDate);
+        operations.editTask(taskID, newTask);
     }
 
     @FXML
@@ -112,18 +123,19 @@ public class ListAppController {
 
     @FXML
     void removeTaskClicked(ActionEvent event) {
-        int iD = Integer.parseInt(taskIDText.getText());
-        operations.deleteTask(iD);
-        System.out.print(iD);
+        int taskID = Integer.parseInt(taskIDText.getText());
+        operations.deleteTask(taskID);
+        System.out.print(taskID);
     }
 
     @FXML
     void loadListClicked(ActionEvent event) {
-        //will loadlist
+        //will Loadlist
     }
 
     @FXML
     void newListClicked(ActionEvent event) {
+        //delete this method
     }
 
     @FXML

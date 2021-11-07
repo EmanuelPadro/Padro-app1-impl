@@ -31,14 +31,16 @@ public class Operations {
         tasks.remove(taskID);
     }
 
-    public void displayList(){
-        for (int i = 0; i < tasks.size() ; i++){
-            System.out.println("Task " + i + ": ");
-            System.out.println("Description: " + tasks.get(i).description);
-            System.out.println("Due Date: " + tasks.get(i).dueDate);
-            System.out.println("--------------------------------");
+    public List<String> displayList(){
+        ArrayList<String> listPrint = new ArrayList<>();
+        for (int i = 0 ; i < tasks.size() ; i++){
+            listPrint.add("Task " + i + " -  Due Date: " + tasks.get(i).dueDate +
+                    "\nDescription: " + tasks.get(i).description + "\n\n");
         }
+        return listPrint;
     }
+
+
     public void displayComplete(){
         //Will display only complete tasks
     }

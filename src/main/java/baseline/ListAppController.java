@@ -8,10 +8,17 @@ package baseline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListAppController {
     Operations operations = new Operations();
+
+    @FXML
+    public TextArea listTextBox;
 
     @FXML
     public TextField taskIDText;
@@ -104,7 +111,12 @@ public class ListAppController {
 
     @FXML
     void displayTasks(ActionEvent event) {
-        operations.displayList();
+        List<String> listPrint;
+        listPrint = operations.displayList();
+        listTextBox.setText(String.valueOf(listPrint)
+                .replace(",","")
+                .replace("[","")
+                .replace("]",""));
     }
 
     @FXML

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -44,5 +45,6 @@
       <Button fx:id="clearList" mnemonicParsing="false" onAction="#clearList" text="Clear List" GridPane.columnIndex="5" />
       <Button fx:id="loadList" mnemonicParsing="false" onAction="#loadListClicked" text="Load List" GridPane.columnIndex="4" />
       <Button fx:id="createList" mnemonicParsing="false" onAction="#newListClicked" text="New List" GridPane.columnIndex="3" />
+      <TextArea fx:id="listTextBox" prefHeight="382.0" prefWidth="387.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="6" />
    </children>
 </GridPane>

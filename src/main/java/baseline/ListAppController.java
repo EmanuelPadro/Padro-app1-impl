@@ -14,6 +14,8 @@ public class ListAppController {
     Operations operations = new Operations();
 
     @FXML
+    public TextField taskIDText;
+    @FXML
     public TextField taskDueDateText;
     @FXML
     public TextField taskDescriptionText;
@@ -78,6 +80,8 @@ public class ListAppController {
         String desc = taskDescriptionText.getText();
         Task newTask = new Task(desc, dueDate);
         operations.addTasks(newTask);
+        System.out.println("Testing");
+        System.out.println(newTask.description + " " + newTask.dueDate);
 
     }
 
@@ -93,7 +97,7 @@ public class ListAppController {
 
     @FXML
     void displayTasks(ActionEvent event) {
-        //when displayTasks is clicked it should call a class which will go trough the process
+        operations.displayList();
     }
 
     @FXML
@@ -108,7 +112,9 @@ public class ListAppController {
 
     @FXML
     void removeTaskClicked(ActionEvent event) {
-        //when removeTask is clicked it should call a class which will go trough the process
+        int iD = Integer.parseInt(taskIDText.getText());
+        operations.deleteTask(iD);
+        System.out.print(iD);
     }
 
     @FXML

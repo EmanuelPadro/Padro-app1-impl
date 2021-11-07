@@ -28,7 +28,7 @@
    <children>
       <TextField fx:id="taskDueDateText" promptText="Task Due Date" GridPane.columnIndex="5" GridPane.rowIndex="2" />
       <TextField fx:id="taskDescriptionText" promptText="Task Description" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-      <TextField promptText="Task Num" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <TextField fx:id="taskIDText" promptText="Task Num" GridPane.columnIndex="4" GridPane.rowIndex="5" />
       <TextField promptText="New Due Date" GridPane.columnIndex="5" GridPane.rowIndex="7" />
       <TextField promptText="New Description" GridPane.columnIndex="4" GridPane.rowIndex="7" />
       <TextField promptText="List Title" GridPane.columnIndex="5" GridPane.rowIndex="3" />

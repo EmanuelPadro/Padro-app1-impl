@@ -9,7 +9,7 @@ public class Task {
     String description;
     String dueDate;
 
-    Task(String inputDescription, String inputDueDate){
+    public Task(String inputDescription, String inputDueDate){
         description = inputDescription;
         dueDate = inputDueDate;
     }

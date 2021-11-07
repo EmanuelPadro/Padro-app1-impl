@@ -12,12 +12,12 @@ import java.util.List;
 public class Operations {
     List<Task> tasks =  new ArrayList<>();
 
-    Operations(){
-
-    }
-
     public void addTasks(Task newTask){
         this.tasks.add(newTask);
+    }
+
+    public String returnTaskDesc(int taskID){
+        return tasks.get(taskID).description;
     }
 
     public void editTaskDescription(){
@@ -26,11 +26,16 @@ public class Operations {
     public void editTaskDueDate(){
         //Access a task within a list and changes its due date to a new one
     }
-    public void deleteTask(){
-        //access a task from list and remove it
+    public void deleteTask(int taskID){
+        tasks.remove(taskID);
     }
     public void displayList(){
-        //simply displays a list for the use to view upon asking for it
+        for (int i = 0; i < tasks.size() ; i++){
+            System.out.println("Task " + i + ": ");
+            System.out.println("Description: " + tasks.get(i).description);
+            System.out.println("Due Date: " + tasks.get(i).dueDate);
+            System.out.println("--------------------------------");
+        }
     }
     public void displayComplete(){
         //Will display only complete tasks

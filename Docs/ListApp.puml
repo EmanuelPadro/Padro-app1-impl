@@ -1,24 +1,47 @@
 @startuml
 'https://plantuml.com/sequence-diagram
-class Database
-class ListandTasks{
-+createList
-+editList
-+deleteList
-+addTasks
-editTaskDescription
-+editTaskDuetDate
-+deleteTask
-+displayList
-}
 class ListApp{
-
++Main
++start
 }
 class ListAppController{
+-listTextBox
+-taskIDText
+-newDueDate
+-newDescription
+-taskDueDateText
+-taskDescriptionText
+-clearList
+
+
+
++addTaskClicked
++displayTasks
++editTaskClicked
++removeTaskClicked
++clearList
+
+
 
 }
 
-class Tasks
+class Operations{
+-task: List<Task>
 
-Tasks <|-- Database
++addTasks
++returnTaskDesc
++returnTaskDueDate: String
+editTask
++deleteTask
++displayList: List<String>
++clearList
+}
+
+class Task {
+-Description: String
+-DueDate: String
+}
+
+ListAppController - Operations
+Task --* Operations
 @enduml

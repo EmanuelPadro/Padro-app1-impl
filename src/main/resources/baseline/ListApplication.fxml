@@ -10,9 +10,9 @@
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.ListAppController">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -27,24 +27,16 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextField fx:id="taskDueDateText" promptText="Task Due Date" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-      <TextField fx:id="taskDescriptionText" promptText="Task Description" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-      <TextField fx:id="taskIDText" promptText="Task Num" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-      <TextField fx:id="newDueDate" promptText="New Due Date" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-      <TextField fx:id="newDescription" promptText="New Description" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-      <TextField promptText="List Title" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-      <Button fx:id="saveList" mnemonicParsing="false" onAction="#saveListClicked" text="Save List" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-      <Button fx:id="markComplete" mnemonicParsing="false" onAction="#markCompleteClicked" text="Mark Complete" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-      <TextField fx:id="fileTextbox" promptText="File Location" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-      <Button fx:id="addTask" mnemonicParsing="false" onAction="#addTaskClicked" text="Add Task" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-      <Button fx:id="removeTask" mnemonicParsing="false" onAction="#removeTaskClicked" text="Remove Task" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-      <Button fx:id="editTask" mnemonicParsing="false" onAction="#editTaskClicked" text="Edit Task" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-      <Button fx:id="allTasks" mnemonicParsing="false" onAction="#displayTasks" text="All Tasks" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button fx:id="incompleteTasks" mnemonicParsing="false" onAction="#displayIncompleteTasks" text="Incomplete Tasks" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-      <Button fx:id="completeTasks" mnemonicParsing="false" onAction="#displayCompleteTasks" prefHeight="25.0" prefWidth="109.0" text="Complete Tasks" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button fx:id="clearList" mnemonicParsing="false" onAction="#clearList" text="Clear List" GridPane.columnIndex="5" />
-      <Button fx:id="loadList" mnemonicParsing="false" onAction="#loadListClicked" text="Load List" GridPane.columnIndex="4" />
-      <Button fx:id="createList" mnemonicParsing="false" onAction="#newListClicked" text="New List" GridPane.columnIndex="3" />
-      <TextArea fx:id="listTextBox" prefHeight="382.0" prefWidth="387.0" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="6" />
+      <TextField fx:id="taskDueDateText" promptText="Task Due Date" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+      <TextField fx:id="taskDescriptionText" promptText="Task Description" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <TextField fx:id="taskIDText" promptText="Task Num" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <TextField fx:id="newDueDate" promptText="New Due Date" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <TextField fx:id="newDescription" promptText="New Description" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Button fx:id="addTask" mnemonicParsing="false" onAction="#addTaskClicked" text="Add Task" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="removeTask" mnemonicParsing="false" onAction="#removeTaskClicked" text="Remove Task" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button fx:id="editTask" mnemonicParsing="false" onAction="#editTaskClicked" text="Edit Task" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Button fx:id="allTasks" mnemonicParsing="false" onAction="#displayTasks" text="Display All Tasks" GridPane.columnIndex="1" />
+      <Button fx:id="clearList" mnemonicParsing="false" onAction="#clearList" text="Clear List" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <TextArea fx:id="listTextBox" prefHeight="382.0" prefWidth="387.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="6" />
    </children>
 </GridPane>

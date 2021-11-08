@@ -10,8 +10,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListAppController {
@@ -39,54 +37,16 @@ public class ListAppController {
     public Button clearList;
 
     @FXML
-    public Button loadList;
-
-    @FXML
-    public Button createList;
-
-    @FXML
-    private Button addList;
-
-    @FXML
     private Button addTask;
 
     @FXML
     private Button allTasks;
 
     @FXML
-    private Button completeTasks;
-
-    @FXML
-    private Button displayAllList;
-
-    @FXML
     private Button editTask;
 
     @FXML
-    private Button editTitle;
-
-    @FXML
-    private TextField fileTextbox;
-
-    @FXML
-    private Button incompleteTasks;
-
-    @FXML
-    private Button markComplete;
-
-    @FXML
-    private Button removeList;
-
-    @FXML
     private Button removeTask;
-
-    @FXML
-    private Button saveList;
-
-    @FXML
-    void saveListClicked(ActionEvent event) {
-        //when saveList is clicked it should call a class which will go trough the process
-    }
 
     @FXML
     void addTaskClicked(ActionEvent event) {
@@ -97,16 +57,6 @@ public class ListAppController {
         System.out.println("Testing");
         System.out.println(newTask.description + " " + newTask.dueDate);
 
-    }
-
-    @FXML
-    void displayCompleteTasks(ActionEvent event) {
-        //when displayCompleteTasks button is clicked it should call a class which will go trough the process
-    }
-
-    @FXML
-    void displayIncompleteTasks(ActionEvent event) {
-        //when displayIncompleteTasks is clicked it should call a class which will go trough the process
     }
 
     @FXML
@@ -129,11 +79,6 @@ public class ListAppController {
     }
 
     @FXML
-    void markCompleteClicked(ActionEvent event) {
-        //when markComplete is clicked it should call a class which will go trough the process
-    }
-
-    @FXML
     void removeTaskClicked(ActionEvent event) {
         int taskID = Integer.parseInt(taskIDText.getText());
         operations.deleteTask(taskID);
@@ -141,17 +86,7 @@ public class ListAppController {
     }
 
     @FXML
-    void loadListClicked(ActionEvent event) {
-        //will LoadList
-    }
-
-    @FXML
-    void newListClicked(ActionEvent event) {
-        //delete this method
-    }
-
-    @FXML
     void clearList(ActionEvent event) {
-        //will clear memory
+        operations.clearList();
     }
 }

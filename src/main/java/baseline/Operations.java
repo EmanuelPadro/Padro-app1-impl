@@ -40,12 +40,8 @@ public class Operations {
         return listPrint;
     }
 
-
-    public void displayComplete(){
-        //Will display only complete tasks
-    }
-    public void displayIncomplete(){
-        //Will display only incomplete tasks
+    public void clearList(){
+        tasks.clear();
     }
 
 }
